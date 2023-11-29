@@ -19,10 +19,10 @@
 
   .about-me-container {
     max-width: 70%;
-    margin: 0 auto; 
+    margin: 3rem auto; 
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: 20px;
+    gap: 40px;
     align-items: center;
   }
   
@@ -33,5 +33,24 @@
     border-radius: 80%;
   }
 
+  @media (max-width: 768px) {
+    .about-me-image {
+      float: none;
+      display: block;
+      margin: 0 auto;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 80%;
+    }
+
+    .about-me-container {
+      display: grid;
+      grid-template-columns: auto ;
+      justify-content: center;
+      align-content: center;
+      text-align: center;
+    }
+  }
   </style>
   
