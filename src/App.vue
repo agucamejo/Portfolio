@@ -5,6 +5,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 import { useDark, useToggle } from '@vueuse/core'
 import AboutMe from './components/AboutMe.vue'
 import Project from './components/Project.vue'
+import Skills from './components/Skills.vue'
 
 // const isDark = useDark();
 // const toggleDark = useToggle(isDark);
@@ -27,7 +28,7 @@ const mobileMenuOpen = ref(false)
       </div>
       <AboutMe class="pt-16 pb-16 mt-5 mb-5"/>
       <Project />
-      <Project />
+      <Skills />
     </div>
   
   

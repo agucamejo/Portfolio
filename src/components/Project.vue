@@ -30,7 +30,7 @@
   import Streetwear from '../assets/images/streetwear.jpeg';
   import Globo from '../assets/images/globo.jpeg';
   import RestoBrk from '../assets/images/restobrk.jpeg';
-  import VideoRestoBrk from '../assets/videos/Resto-Brk.mp4';
+  import VideoRestoBrk from '../assets/videos/Resto-BRK.mp4';
 
   export default {
     name: 'ProjectGallery',
