@@ -105,8 +105,11 @@
 
   @media (max-width: 768px) {
     .project-container{
-    margin: 0;
-  }
+      max-width: 70%;
+      margin: 3rem auto;
+      display: grid;
+      align-items: center;
+    }
   }
   </style>
   
