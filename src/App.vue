@@ -6,6 +6,7 @@ import { useDark, useToggle } from '@vueuse/core'
 import AboutMe from './components/AboutMe.vue'
 import Project from './components/Project.vue'
 import Skills from './components/Skills.vue'
+import Contact from './components/Contact.vue'
 
 // const isDark = useDark();
 // const toggleDark = useToggle(isDark);
@@ -29,6 +30,7 @@ const mobileMenuOpen = ref(false)
       <AboutMe class="pt-16 pb-16 mt-5 mb-5"/>
       <Project />
       <Skills />
+      <Contact />
     </div>
   
   
