@@ -46,7 +46,7 @@
                 </label>
                 <textarea bind:value={form.message} required class="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"></textarea>
             </div>
-            <button type="submit" class="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150">
+            <button @click="handleSubmit" type="submit" class="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150">
                 Enviar
             </button>
             </form>
@@ -79,7 +79,29 @@
             ]
         };
     },
- }
+    methods: {
+        async handleSubmit() {
+        try {
+            const response = await fetch('https://formspree.io/f/mayggkqw', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+                body: JSON.stringify(this.form),
+            });
+
+            if (response.ok) {
+                 console.log('Formulario enviado con éxito');
+                // Puedes realizar acciones adicionales después de enviar el formulario
+            } else {
+                console.log('1');
+            }
+        } catch (error) {
+            console.error('Error al enviar el formulario', error);
+        }
+      },
+    },
+ };
 
   let form = {
     fullName: '',
@@ -88,10 +110,7 @@
     message: ''
   };
 
-  function handleSubmit() {
-    // Handle form submission
-    console.log("Form submitted", form);
-  }
+  
 </script>
 
 <style scoped>
