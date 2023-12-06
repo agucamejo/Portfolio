@@ -21,34 +21,35 @@
             </div>
         </div>
         <div class="flex-1 mt-12 sm:max-w-lg lg:max-w-md">
-            <form on:submit|preventDefault={handleSubmit} class="space-y-5">
+            <form action="https://formsubmit.co/agustincamejo03@gmail.com" method="POST" class="space-y-5">
             <div>
-                <label class="font-medium">
-                Nombre completo
+                <label class="font-medium" >
+                Nombre o empresa
                 </label>
-                <input type="text" bind:value={form.fullName} required class="w-full mt-2 px-3 py-2 text-black bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg" />
+                <input type="text" name="name" required class="w-full mt-2 px-3 py-2 dark:text-white text-black bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg" />
             </div>
             <div>
-                <label class="font-medium">
+                <label class="font-medium" >
                 Correo
                 </label>
-                <input type="email" bind:value={form.email} required class="w-full mt-2 px-3 py-2 text-black bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg" />
+                <input type="email" name="email" required class="w-full mt-2 px-3 py-2 dark:text-white text-black bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg" />
             </div>
             <div>
                 <label class="font-medium">
-                Empresa
+                Asunto
                 </label>
-                <input type="text" bind:value={form.company} required class="w-full mt-2 px-3 py-2 text-black bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg" />
+                <input type="text" name="subject" required class="w-full mt-2 px-3 py-2 dark:text-white text-black bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg" />
             </div>
             <div>
-                <label class="font-medium">
+                <label class="font-medium" >
                 Mensaje
                 </label>
-                <textarea bind:value={form.message} required class="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"></textarea>
+                <textarea name="message" required class="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"></textarea>
             </div>
             <button @click="handleSubmit" type="submit" class="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150">
                 Enviar
             </button>
+            <input type="hidden" name="_next" value="https://agucamejo.netlify.app/"/>
             </form>
         </div>
         </div>
@@ -79,38 +80,8 @@
             ]
         };
     },
-    methods: {
-        async handleSubmit() {
-        try {
-            const response = await fetch('https://formspree.io/f/mayggkqw', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-                body: JSON.stringify(this.form),
-            });
-
-            if (response.ok) {
-                 console.log('Formulario enviado con éxito');
-                // Puedes realizar acciones adicionales después de enviar el formulario
-            } else {
-                console.log('1');
-            }
-        } catch (error) {
-            console.error('Error al enviar el formulario', error);
-        }
-      },
-    },
  };
 
-  let form = {
-    fullName: '',
-    email: '',
-    company: '',
-    message: ''
-  };
-
-  
 </script>
 
 <style scoped>
