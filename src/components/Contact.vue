@@ -1,4 +1,5 @@
 <template>
+
     <section class="pb-14">
     <div class="max-w-screen-xl mx-auto px-4 text-black dark:text-white md:px-8">
         <div class="max-w-lg mx-auto gap-12 justify-between lg:flex lg:max-w-none">
@@ -85,6 +86,11 @@
 </script>
 
 <style scoped>
+
+.project-container{
+    margin: 3rem auto;
+    max-width: 70%;
+  }
 @media (max-width: 768px) {
     h2{
       text-align: center;

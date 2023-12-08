@@ -56,7 +56,7 @@
             image: Globo,
             description: 'Perfil de red social.',
             repo:'https://github.com/agucamejo/Globo',
-            deploy:'https://agucamejo.github.io/Globo/',
+            deploy:'https://globoo.vercel.app/',
           },
           {
             name: '1998-Streetwear',
@@ -65,13 +65,13 @@
             repo:'https://github.com/agucamejo/1998-Streetwear',
             deploy:'https://agucamejo.github.io/1998-Streetwear/',
           },
-          {
-            name: 'Cine UTN',
-            image: RestoBrk,
-            description: 'Administrador de cine.',
-            repo:'https://github.com/agucamejo/Cine-UTN',
-            deploy: VideoRestoBrk,
-          }
+            // {
+            //  name: 'Cine UTN',
+            //   image: RestoBrk,
+            //   description: 'Administrador de cine.',
+            //   repo:'https://github.com/agucamejo/Cine-UTN',
+            //   deploy: VideoRestoBrk,
+            // }
         ],
       };
     },
@@ -83,7 +83,6 @@
   .project-container{
     margin: 3rem auto;
     max-width: 70%;
-    padding-bottom: 4rem;
   }
 
   svg{
@@ -91,9 +90,10 @@
   }
   
   .project-gallery-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
   
   .project-card {
@@ -102,6 +102,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
+    margin: 0rem 1.5rem 3rem 2rem;
   }
   
   .project-card:hover{
@@ -136,14 +137,12 @@
 
   @media (max-width: 768px) {
     .project-container{
-      max-width: 70%;
-      margin: 3rem auto;
-      display: grid;
-      grid-template-columns: auto;
-      justify-content: center;
-      align-content: center;
+      max-width: 100%;
       text-align: center;
-      align-items: center;
+    }
+
+    .project-details div{
+      justify-content: center;
     }
   }
   </style>
