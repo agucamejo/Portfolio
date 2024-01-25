@@ -65,13 +65,6 @@
             repo:'https://github.com/agucamejo/1998-Streetwear',
             deploy:'https://agucamejo.github.io/1998-Streetwear/',
           },
-            // {
-            //  name: 'Cine UTN',
-            //   image: RestoBrk,
-            //   description: 'Administrador de cine.',
-            //   repo:'https://github.com/agucamejo/Cine-UTN',
-            //   deploy: VideoRestoBrk,
-            // }
         ],
       };
     },
