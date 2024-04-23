@@ -1,7 +1,6 @@
 <template>
-
-    <section class="pb-14">
-    <div class="max-w-screen-xl mx-auto px-4 text-black dark:text-white md:px-8">
+    <div class="pb-14 max-w-[70%] mx-auto my-20">
+    <div class=" text-black dark:text-white">
         <div class="max-w-lg mx-auto gap-12 justify-between lg:flex lg:max-w-none">
         <div class="max-w-lg space-y-3">
             <h2 class="text-4xl font-semibold color">CONTACTO</h2>
@@ -55,7 +54,7 @@
         </div>
         </div>
     </div>
-    </section>
+    </div>
 </template>
 
 <script>
